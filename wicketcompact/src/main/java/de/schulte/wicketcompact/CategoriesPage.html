@@ -5,9 +5,14 @@
 <body>
 <wicket:extend>
     <h1>Kategorien</h1>
-    <ul>
-        <li wicket:id="categories"></li>
-    </ul>
+    <table class="table">
+        <tr wicket:id="categories">
+            <td wicket:id="name"></td>
+            <td>
+                <img wicket:id="image" alt="Category Image" height="100px"/>
+            </td>
+        </tr>
+    </table>
 </wicket:extend>
 </body>
 </html>
