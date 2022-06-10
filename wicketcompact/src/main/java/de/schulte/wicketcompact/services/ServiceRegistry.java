@@ -5,13 +5,13 @@ import java.util.Map;
 
 public class ServiceRegistry {
 
-    private static final Map<Class<? extends BaseService>, BaseService> SERVICES = new HashMap<>();
+    private static final Map<Class<? extends BaseService<?>>, BaseService<?>> SERVICES = new HashMap<>();
 
     private ServiceRegistry() {
     }
 
-    public static <T extends BaseService> T get(Class<T> serviceClass) {
-        BaseService service = SERVICES.get(serviceClass);
+    public static <T extends BaseService<?>> T get(Class<T> serviceClass) {
+        BaseService<?> service = SERVICES.get(serviceClass);
         if (service == null) {
             try {
                 service = serviceClass.newInstance();
@@ -20,7 +20,6 @@ public class ServiceRegistry {
                 throw new RuntimeException("Service konnte nicht erstellt werden", e);
             }
         }
-        return (T) service;
+        return (T)service;
     }
-
 }
