@@ -22,6 +22,8 @@ public class Start
 	 */
 	public static void main(String[] args)
 	{
+		System.setProperty("tenant", "cafeone");
+
 		Server server = new Server();
 
 		HttpConfiguration http_config = new HttpConfiguration();
