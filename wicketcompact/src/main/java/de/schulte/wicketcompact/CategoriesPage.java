@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.markup.html.WebComponent;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+import org.apache.wicket.markup.html.navigation.paging.PagingNavigation;
 import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.markup.repeater.data.DataView;
 import org.apache.wicket.markup.repeater.data.IDataProvider;
@@ -41,6 +41,6 @@ public class CategoriesPage extends BaseEntitiesPage {
         };
         categoriesView.setItemsPerPage(3);
         add(categoriesView);
-        add(new PagingNavigator("navigator", categoriesView));
+        add(new PagingNavigation("navigator", categoriesView));
     }
 }
