@@ -4,7 +4,25 @@
 </head>
 <body>
 <wicket:extend>
-    TODO Artikel
+    <h1>Articles</h1>
+    <table class="table">
+        <tr>
+            <th>Name / Description</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        <tr wicket:id="entities">
+            <td>
+                <div wicket:id="name"></div>
+                <div wicket:id="description"></div>
+            </td>
+            <td wicket:id="price"></td>
+            <td>
+                <img wicket:id="image" alt="Article Image" height="100px"/>
+            </td>
+        </tr>
+    </table>
+    <div wicket:id="navigation"></div>
 </wicket:extend>
 </body>
 </html>

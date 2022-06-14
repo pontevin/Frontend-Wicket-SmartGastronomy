@@ -4,7 +4,18 @@
 </head>
 <body>
 <wicket:extend>
-    TODO Tische
+    <h1>Tables</h1>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Seat Count</th>
+        </tr>
+        <tr wicket:id="entities">
+            <td wicket:id="name"></td>
+            <td wicket:id="seat-count"></td>
+        </tr>
+    </table>
+    <div wicket:id="navigation"></div>
 </wicket:extend>
 </body>
 </html>

@@ -6,15 +6,18 @@
 <wicket:extend>
     <h1>Kategorien</h1>
     <table class="table">
-        <tr wicket:id="categories">
+        <tr>
+            <th>Name</th>
+            <th></th>
+        </tr>
+        <tr wicket:id="entities">
             <td wicket:id="name"></td>
             <td>
                 <img wicket:id="image" alt="Category Image" height="100px"/>
             </td>
         </tr>
     </table>
-    <div wicket:id="navigation">
-    </div>
+    <div wicket:id="navigation"></div>
 </wicket:extend>
 </body>
 </html>
