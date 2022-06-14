@@ -4,7 +4,6 @@ import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.Component;
 import org.apache.wicket.markup.html.WebComponent;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.navigation.paging.PagingNavigation;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import de.schulte.wicketcompact.entities.Category;
@@ -22,7 +21,7 @@ public class CategoriesPage extends BaseEntitiesPage {
         super.onInitialize();
         
         final CategoryService categoryService = ServiceRegistry.get(CategoryService.class);
-        final EntitiesView<Category> categoriesView = new EntitiesView<Category>("categories", categoryService.listAll(), 2) {
+        final EntitiesView<Category> categoriesView = new EntitiesView<Category>("categories", categoryService.listAll()) {
             @Override
             protected Component[] getComponentsForEntity(final Category category) {
                 final WebComponent image = new WebComponent("image");
@@ -34,6 +33,6 @@ public class CategoriesPage extends BaseEntitiesPage {
             }
         };
         add(categoriesView);
-        add(new PagingNavigation("navigator", categoriesView));
+        add(new EntitiesNavigation("navigation", categoriesView));
     }
 }
