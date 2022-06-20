@@ -1,10 +1,6 @@
 package de.schulte.wicketcompact.resources;
 
-import org.apache.wicket.markup.head.HeaderItem;
-import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.request.resource.PackageResourceReference;
-
-import java.util.List;
 
 public class DefaultTheme extends PackageResourceReference {
 
