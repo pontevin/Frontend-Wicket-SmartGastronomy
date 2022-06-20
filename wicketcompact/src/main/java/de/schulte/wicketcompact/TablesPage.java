@@ -11,7 +11,7 @@ import de.schulte.wicketcompact.services.TableService;
 public class TablesPage extends BaseEntitiesPage<Table> {
 
     public TablesPage(final PageParameters parameters) {
-        super(parameters);
+        super(parameters, 10);
     }
 
     @Override

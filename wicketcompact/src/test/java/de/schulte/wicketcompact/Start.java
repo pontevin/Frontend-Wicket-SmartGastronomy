@@ -22,7 +22,7 @@ public class Start
 	 */
 	public static void main(String[] args)
 	{
-		System.setProperty("tenant", "cafeone");
+		System.setProperty("tenant", "default");
 
 		Server server = new Server();
 
