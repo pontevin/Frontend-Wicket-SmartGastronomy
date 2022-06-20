@@ -1,7 +1,6 @@
 package de.schulte.wicketcompact;
 
 import org.apache.wicket.Component;
-import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import de.schulte.wicketcompact.entities.BaseEntity;
@@ -12,7 +11,6 @@ public abstract class BaseEntitiesPage<E extends BaseEntity> extends BaseWebPage
 
     public <T extends BaseService<E>> BaseEntitiesPage(final PageParameters parameters) {
         super(parameters);
-        add(new BookmarkablePageLink<Void>("back", getApplication().getHomePage()));
     }
 
     @Override
